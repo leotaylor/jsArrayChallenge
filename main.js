@@ -25,5 +25,41 @@ var earth = [1,2,3,4,5,6,7,8,9];
 var challengeTwo = document.getElementById("challenge-2");
 earth.splice(2, 1, 7);
 earth.splice(6, 1, 3);
-
 challengeTwo.innerHTML = earth;
+
+//  Challenge 3 ----------------------------
+
+var input = [ 1, 1, 1, 2, 1, 1 ];
+var unique = 0;
+// var input = [ 0, 0, 0, 0, 0, 0, 0, 0.55, 0, 0 ];
+// function uniqueFunc(input) {
+for (var k = 0; k < input.length; k++){
+    var test = input.filter
+    unique += test;
+}
+console.log(unique);
+
+// }
+
+// Challenge 6-------------------------------
+
+var test1 = [1,3]; 
+var test2 = [2,3,4]; 
+var test3 = [13,11,10,3,2,1,4,5,6,9,7,8]; 
+
+function challenge6(testArray){
+    var arrayLength = (testArray.length) + 1;
+    var correctSum =(arrayLength * (arrayLength + 1)) / 2;
+    
+    var testArraysum = 0;
+    for(var l = 0; l < testArray.length; l++){
+        testArraysum += testArray[l];
+    }
+    var missingNumber = correctSum - testArraysum;
+
+    var printDiv = document.getElementById("challenge-6");
+    printDiv.innerHTML += "<h1> The missing number is: " + missingNumber + "</h1>";
+}
+challenge6(test1);
+challenge6(test2);
+challenge6(test3);
