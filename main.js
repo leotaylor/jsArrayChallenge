@@ -25,21 +25,34 @@ var earth = [1,2,3,4,5,6,7,8,9];
 var challengeTwo = document.getElementById("challenge-2");
 earth.splice(2, 1, 7);
 earth.splice(6, 1, 3);
-challengeTwo.innerHTML = earth;
+challengeTwo.innerHTML = "<h1>" +earth+ "</h1>";
 
 //  Challenge 3 ----------------------------
 
-var input = [ 1, 1, 1, 2, 1, 1 ];
-var unique = 0;
-// var input = [ 0, 0, 0, 0, 0, 0, 0, 0.55, 0, 0 ];
-// function uniqueFunc(input) {
-for (var k = 0; k < input.length; k++){
-    var test = input.filter
-    unique += test;
-}
-console.log(unique);
-
+// var input = [ 1, 1, 1, 2, 1, 1 ];
+// var unique = 0;
+// // var input = [ 0, 0, 0, 0, 0, 0, 0, 0.55, 0, 0 ];
+// // function uniqueFunc(input) {
+// for (var k = 0; k < input.length; k++){
+//     var test = input.filter
+//     unique += test;
 // }
+
+
+// Challenge 4 --------------------------
+var challengeFourInputA = [ 1, 2, 3 ];  // [2, 4, 6]
+var challengeFourInputB = [ 3, 8, 1, 2, 4, 12 ];  // [ 6, 16, 2, 4, 8, 24 ]
+
+function challenge4(doubleMint) {
+    var doubled = [];
+    for (var m = 0; m < doubleMint.length; m++) {
+        doubled.push(doubleMint[m] * 2);
+    }
+    return doubled;
+}
+
+var doubledArray = challenge4(challengeFourInputB);
+document.getElementById('challenge-4').innerHTML = "<h3> Challenge 4: " + doubledArray + "</h3>";
 
 // Challenge 6-------------------------------
 
