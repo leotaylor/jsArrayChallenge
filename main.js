@@ -54,6 +54,23 @@ function challenge4(doubleMint) {
 var doubledArray = challenge4(challengeFourInputB);
 document.getElementById('challenge-4').innerHTML = "<h3> Challenge 4: " + doubledArray + "</h3>";
 
+// Challenge 5 -------------------------------
+
+// var array1 = [1,2];
+// var array2 = [1];
+
+var array1 = [1,2, 4, 7, 5, 9];
+var array2 = [5, 9, 2];  
+for (var n = 0; n < array1.length; n++) {
+  for (var o = 0; o < array2.length; o++) {
+    if (array1[n] === array2[o]) {
+      array1.splice(n, 1);
+    }
+  }
+}
+var printDiv5 = document.getElementById("challenge-5");
+printDiv5.innerHTML = "<h3> Challenge 5: " + array1 + "</h3>";
+
 // Challenge 6-------------------------------
 
 var test1 = [1,3]; 
@@ -71,7 +88,7 @@ function challenge6(testArray){
     var missingNumber = correctSum - testArraysum;
 
     var printDiv = document.getElementById("challenge-6");
-    printDiv.innerHTML += "<h3>Challenge 5: The missing number is: " + missingNumber + "</h3>";
+    printDiv.innerHTML += "<h3>Challenge 6: The missing number is: " + missingNumber + "</h3>";
 }
 challenge6(test1);
 challenge6(test2);
