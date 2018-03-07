@@ -17,7 +17,7 @@ for (var j = 0; j < word2.length; j++){
 if (wordScore1 > wordScore2){
     challengeOne.innerHTML = word1;
 } else {
-    challengeOne.innerHTML = word2;
+    challengeOne.innerHTML = "<h2> Challenge 1: " + word2 + "</h2>";
 }
 
 //  CHALLENGE 2 --------------------------
@@ -25,18 +25,18 @@ var earth = [1,2,3,4,5,6,7,8,9];
 var challengeTwo = document.getElementById("challenge-2");
 earth.splice(2, 1, 7);
 earth.splice(6, 1, 3);
-challengeTwo.innerHTML = "<h1>" +earth+ "</h1>";
+challengeTwo.innerHTML = "<h2> Challenge 2: " +earth+ "</h2>";
 
 //  Challenge 3 ----------------------------
 
-// var input = [ 1, 1, 1, 2, 1, 1 ];
-// var unique = 0;
-// // var input = [ 0, 0, 0, 0, 0, 0, 0, 0.55, 0, 0 ];
-// // function uniqueFunc(input) {
-// for (var k = 0; k < input.length; k++){
-//     var test = input.filter
-//     unique += test;
-// }
+var challengeThreeInputA = [ 1, 1, 7, 1, 1, 1, 1 ]
+var unique = function uniq(arr1) {
+  return arr1.filter(function(elem, index, self) {
+    return self.indexOf(elem)==self.lastIndexOf(elem);
+  });
+}
+var aNotherDivElement = document.getElementById('challenge-3');
+aNotherDivElement.innerHTML = "<h2> Challenge 3: " + unique(challengeThreeInputA) + "</h2>";
 
 
 // Challenge 4 --------------------------
@@ -71,7 +71,7 @@ function challenge6(testArray){
     var missingNumber = correctSum - testArraysum;
 
     var printDiv = document.getElementById("challenge-6");
-    printDiv.innerHTML += "<h1> The missing number is: " + missingNumber + "</h1>";
+    printDiv.innerHTML += "<h3>Challenge 5: The missing number is: " + missingNumber + "</h3>";
 }
 challenge6(test1);
 challenge6(test2);
